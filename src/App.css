@@ -14,3 +14,11 @@
     justify-content: center;
     font-size: 3rem;
   }
+  header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    font-size: 2rem;
+    color: #777;
+  }

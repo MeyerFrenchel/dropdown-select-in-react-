@@ -1,29 +1,27 @@
 import React from 'react'
 
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  
-} from "react-router-dom";
-import Sidebar from './Sidebar';
-import { routes } from './routes';
-import Page from './Page';
+import {cacaData} from './cacaData';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Header from './Header';
+import ButtonOnePage from './ButtonOnePage';
+import ButtonTwoPage from './ButtonTwoPage';
+import ButtonThreePage from './ButtonThreePage';
 function App() {
   return (
+    <Router>
+
     <div className="App">
-      <Router>
-        <Sidebar data={routes} />
-        <Switch>
-          <Route path="/element/:title">
-            <Page data={routes}/>
-          </Route>
-          
-          
-        </Switch>
-      </Router>
+    <Header data={cacaData}/>
+    <Switch>
+      
+      <Route path='/round-buton' component={ButtonOnePage}/>
+      <Route path='/square-buton' component={ButtonTwoPage}/>
+      <Route path='/incolor-buton' component={ButtonThreePage}/>
+    </Switch>
+
     </div>
+    </Router>
   );
 }
 
